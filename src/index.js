@@ -4,9 +4,6 @@ let numbers = [1,3,4,5,7];
 
 let source = Observable.create((observer) => {
     for(let n of numbers){
-        if(n === 5){
-            observer.error('something went wrong');
-        }
         observer.next(n);
     }
     observer.complete();
