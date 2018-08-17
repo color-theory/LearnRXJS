@@ -1,13 +1,20 @@
 import { fromEvent } from 'rxjs'
-import { map, filter } from 'rxjs/operators';
+import { map } from 'rxjs/operators';
 import * as React from 'react'
 
 
-let source = fromEvent(document, 'mousemove');
+let source = fromEvent(document, 'mousemove').pipe(
+    map(e => {
+        return {
+            x: e.clientX, 
+            y: e.clientY
+        }
+    })
+);
 
 source.subscribe(
     (value) => {
-        console.log(value);
+        console.log(value.x, value.y );
     }
 )
 
