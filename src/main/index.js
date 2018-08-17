@@ -1,4 +1,5 @@
 import { Observable } from 'rxjs'
+import { map, filter } from 'rxjs/operators';
 import * as React from 'react'
 
 export class AsyncExperiments extends React.Component{
@@ -18,7 +19,10 @@ export class AsyncExperiments extends React.Component{
                }
            }
            produceValue();
-        });
+        }).pipe(
+            map(n => n * 2),
+            filter(n => n > 4 )
+        );
 
         let subscribed = () => source.subscribe(
             (value) => this.setState({myValue: value}), // observer.next
