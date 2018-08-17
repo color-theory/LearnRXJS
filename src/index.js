@@ -1,22 +1,8 @@
-import { Observable } from 'rxjs'
+import { App } from './app'
+import * as React from 'react'
+import * as ReactDom from 'react-dom'
 
-let numbers = [1,3,4,5,7];
-
-let source = Observable.create((observer) => {
-    for(let n of numbers){
-        observer.next(n);
-    }
-    observer.complete();
-});
-
-source.subscribe(
-    (value)=> {
-        console.log(value);
-    },
-    (error)=>{
-        console.log(error);
-    },
-    ()=>{
-        console.log('complete');
-    }
-);
+ReactDom.render(
+    <App />,
+    document.getElementById('ReactRoot')
+)
