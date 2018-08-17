@@ -1,0 +1,36 @@
+{
+  "name": "learnrxjs",
+  "version": "1.0.0",
+  "description": "A small repo to learn the basics of rxjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/subcogitate/LearnRXJS.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/subcogitate/LearnRXJS/issues"
+  },
+  "homepage": "https://github.com/subcogitate/LearnRXJS#readme",
+  "dependencies": {
+    "rxjs": "^6.2.2"
+  },
+  "devDependencies": {
+    "babel": "^6.23.0",
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-jest": "^23.4.2",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "babel-loader": "^7.1.5",
+    "chai": "^4.1.2",
+    "jest": "^23.5.0",
+    "webpack": "^4.16.5",
+    "webpack-cli": "^3.1.0",
+    "webpack-dev-server": "^3.1.5"
+  }
+}
