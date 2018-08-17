@@ -4,7 +4,9 @@
   "description": "A small repo to learn the basics of rxjs",
   "main": "index.js",
   "scripts": {
-    "test": "jest --watch"
+    "test": "jest --watch",
+    "start": "webpack-dev-server --watch --inline",
+    "build": "webpack"
   },
   "repository": {
     "type": "git",
@@ -17,6 +19,8 @@
   },
   "homepage": "https://github.com/subcogitate/LearnRXJS#readme",
   "dependencies": {
+    "react": "^16.4.2",
+    "react-dom": "^16.4.2",
     "rxjs": "^6.2.2"
   },
   "devDependencies": {
